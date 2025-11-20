@@ -200,3 +200,187 @@ $Primary-Cards-light-hover: #d2d2d2ec;
     width: 100%;
   }
 }
+// Task Configration
+.task-up-contain{
+  // height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task-up-cover{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+.heading-task{
+  font-size: 1.5rem;
+  font-weight: 600;
+  @extend %tiktok-sans;
+}
+.task-form{
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 800px;
+  padding: 1rem;
+  outline: 0.1px solid #999;
+  border-radius: 10px;
+}
+.t-inp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 0;
+  border: none;
+  outline: none;
+}
+.t-inp::placeholder{
+  text-transform: capitalize;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.t-inp.t{
+  padding: 1rem 0;
+}
+.t-inp-toggle{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.t-date{
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding: 5px 15px;
+  background-color: #fff;
+  border: none;
+  outline: 0.1px solid #999;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.t-t-l-c{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.t-t-l-c button{
+  cursor: pointer;
+  font-size: 0.8rem;
+  padding: 8px 15px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+.t-t-l-c button:first-child{
+  background-color: #f0f0f0;
+  color: #111;
+}
+.t-t-l-c button:last-child{
+  background-color: #ff000095;
+  color: #fff;
+}
+.t-low-contain{
+  padding: 2rem;
+  border-top: 0.1px solid #999;
+  margin: 2rem;
+  margin-top: 3rem;
+}
+.t-s-contain{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.heading-t{
+  font-size: 1.3rem;
+  font-weight: 500;
+  @extend %tiktok-sans;
+  opacity: 0.7;
+}
+.t-searchbar{
+  padding: 0.5rem;
+  border: none;
+  outline: 0.1px solid #999;
+  border-radius: 5px;
+}
+// Task items
+.tasks-items{
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  list-style: none;
+}
+.tasks-m-t{
+  padding: 1rem;
+  border-radius: 5px;
+  background-color: $Primary-Cards-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tasks-m-t:hover{
+  background-color: $Primary-Cards-light-hover;
+}
+.task-t-title{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ch-t-btn{
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.ch-t-btn i{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.t-title{
+  font-size: 0.9rem;
+  // text-transform: capitalize;
+  font-weight: 450;
+  opacity: 0.9;
+}
+.m-t-contain{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+}
+.ts-d-d{
+  font-size: 0.9rcap;
+  margin-right: 2rem;
+  padding: 5px 15px;
+  background-color: #808080;
+  color: #fff;
+  border-radius: 5px;
+}
+.btn-t-ed{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.btn-t-ed i{
+  font-size: 1.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-t-ed i:first-child{
+  color: green;
+}
+.btn-t-ed.d i:last-child{
+  color: red;
+}

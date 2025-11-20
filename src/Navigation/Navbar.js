@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Pictures_Files from '../Pictures/Expo/FileExporter'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [ isSidebarOpen, setIsSidebarOpen]= useState(false);
@@ -16,23 +17,23 @@ const Navbar = () => {
             <p className="nav-logo-subname">Cloud</p>
           </div>
         <ul className="nav-items">
-          <li className="nav-lists">Tasks</li>
-          <li className="nav-lists">Schedule</li>
-          <li className="nav-lists">Notes</li>
+          <Link to='/tasks' className="nav-lists">Tasks</Link>
+          <Link to='/notes' className="nav-lists">Notes</Link>
+          <Link to='/schedule' className="nav-lists">Schedule</Link>
         </ul>
         </div>
         <ul className="nav-toggle-btns">
-          <li className="nav-lists-t">Account</li>
+          <Link to='/account' className="nav-lists-t">Account</Link>
           <li className="nav-toggle"><i className="bi bi-sun"></i></li>
           <li onClick={toggleSidebar} className="nav-toggle main"><i className={`bx ${isSidebarOpen? 'bx-x': 'bx-list'}`}></i></li>
         </ul>
       </nav>
       <aside className={`sidebar ${isSidebarOpen? 'open': ''}`}>
         <ul className="side-items">
-          <li className="side-lists">Tasks</li>
-          <li className="side-lists">Schedule</li>
-          <li className="side-lists">Notes</li>
-          <li className="side-lists">Account</li>
+          <Link to='/tasks' className="side-lists">Tasks</Link>
+          <Link to='/notes' className="side-lists">Notes</Link>
+          <Link to='/schedule' className="side-lists">Schedule</Link>
+          <Link to='account' className="side-lists">Account</Link>
         </ul>
       </aside>
     </div>

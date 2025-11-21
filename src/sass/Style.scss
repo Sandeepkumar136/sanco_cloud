@@ -201,13 +201,13 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   }
 }
 // Task Configration
-.task-up-contain{
+.task-up-contain {
   // height: 30vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.task-up-cover{
+.task-up-cover {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -215,12 +215,12 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   gap: 0.5rem;
   margin-top: 3rem;
 }
-.heading-task{
+.heading-task {
   font-size: 1.5rem;
   font-weight: 600;
   @extend %tiktok-sans;
 }
-.task-form{
+.task-form {
   display: flex;
   justify-content: start;
   align-items: start;
@@ -230,7 +230,7 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   outline: 0.1px solid #999;
   border-radius: 10px;
 }
-.t-inp{
+.t-inp {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,21 +239,21 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   border: none;
   outline: none;
 }
-.t-inp::placeholder{
+.t-inp::placeholder {
   text-transform: capitalize;
   font-weight: 500;
   opacity: 0.8;
 }
-.t-inp.t{
+.t-inp.t {
   padding: 1rem 0;
 }
-.t-inp-toggle{
+.t-inp-toggle {
   display: flex;
   justify-content: space-between;
   width: 100%;
   margin-top: 0.5rem;
 }
-.t-date{
+.t-date {
   text-transform: uppercase;
   font-size: 0.8rem;
   padding: 5px 15px;
@@ -263,13 +263,13 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   border-radius: 5px;
   cursor: pointer;
 }
-.t-t-l-c{
+.t-t-l-c {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
 }
-.t-t-l-c button{
+.t-t-l-c button {
   cursor: pointer;
   font-size: 0.8rem;
   padding: 8px 15px;
@@ -278,46 +278,46 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   outline: none;
   border-radius: 5px;
 }
-.t-t-l-c button:first-child{
+.t-t-l-c button:first-child {
   background-color: #f0f0f0;
   color: #111;
 }
-.t-t-l-c button:last-child{
+.t-t-l-c button:last-child {
   background-color: #ff000095;
   color: #fff;
 }
-.t-low-contain{
+.t-low-contain {
   padding: 2rem;
   border-top: 0.1px solid #999;
   margin: 2rem;
   margin-top: 3rem;
 }
-.t-s-contain{
+.t-s-contain {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.heading-t{
+.heading-t {
   font-size: 1.3rem;
   font-weight: 500;
   @extend %tiktok-sans;
   opacity: 0.7;
 }
-.t-searchbar{
+.t-searchbar {
   padding: 0.5rem;
   border: none;
   outline: 0.1px solid #999;
   border-radius: 5px;
 }
 // Task items
-.tasks-items{
+.tasks-items {
   margin-top: 1rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   list-style: none;
 }
-.tasks-m-t{
+.tasks-m-t {
   padding: 1rem;
   border-radius: 5px;
   background-color: $Primary-Cards-light;
@@ -325,37 +325,37 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   justify-content: space-between;
   align-items: center;
 }
-.tasks-m-t:hover{
+.tasks-m-t:hover {
   background-color: $Primary-Cards-light-hover;
 }
-.task-t-title{
+.task-t-title {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
 }
-.ch-t-btn{
+.ch-t-btn {
   border: none;
   outline: none;
   background-color: transparent;
 }
-.ch-t-btn i{
+.ch-t-btn i {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.t-title{
+.t-title {
   font-size: 0.9rem;
   // text-transform: capitalize;
   font-weight: 450;
   opacity: 0.9;
 }
-.m-t-contain{
+.m-t-contain {
   display: flex;
   justify-content: start;
   align-items: center;
   gap: 0.5rem;
 }
-.ts-d-d{
+.ts-d-d {
   font-size: 0.9rcap;
   margin-right: 2rem;
   padding: 5px 15px;
@@ -363,7 +363,7 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   color: #fff;
   border-radius: 5px;
 }
-.btn-t-ed{
+.btn-t-ed {
   border: none;
   outline: none;
   background-color: transparent;
@@ -372,15 +372,83 @@ $Primary-Cards-light-hover: #d2d2d2ec;
   align-items: center;
   cursor: pointer;
 }
-.btn-t-ed i{
+.btn-t-ed i {
   font-size: 1.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.btn-t-ed i:first-child{
+.btn-t-ed i:first-child {
   color: green;
 }
-.btn-t-ed.d i:last-child{
+.btn-t-ed.d i:last-child {
   color: red;
+}
+// Task ---Details Modal
+.tc-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tc-box {
+  width: 600px;
+  padding: 1rem;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(233, 233, 233, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+}
+.tc-head-wrap{
+  display: flex;
+  justify-content: space-between;
+}
+.tc-close-btn {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+.tc-close-btn i {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.tc-title {
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+.tc-desc {
+  padding: 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.tc-status {
+  width: fit-content;
+  padding: 5px 15px;
+  background-color: #808080;
+  color: #fff;
+  font-size: 1rcap;
+  border-radius: 5px;
+}
+.tc-due {
+  margin-top: 0.3rem;
+  width: fit-content;
+  padding: 5px 15px;
+  background-color: #808080;
+  color: #fff;
+  font-size: 1rcap;
+  border-radius: 5px;
+}
+.tc-created {
+  font-size: 1.2rcap;
+  margin-top: 0.5rem;
 }

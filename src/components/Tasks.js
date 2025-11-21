@@ -120,8 +120,7 @@ export default function Tasks() {
     const term = searchTerm.toLowerCase();
     return (
       task.title.toLowerCase().includes(term) ||
-      (task.description &&
-        task.description.toLowerCase().includes(term))
+      (task.description && task.description.toLowerCase().includes(term))
     );
   });
 
@@ -143,9 +142,7 @@ export default function Tasks() {
                 type="text"
                 placeholder="Fix tire this weekend"
                 value={form.title}
-                onChange={(e) =>
-                  setForm({ ...form, title: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, title: e.target.value })}
                 required
               />
               <input
@@ -184,9 +181,7 @@ export default function Tasks() {
           </div>
         </div>
 
-        {error && (
-          <p style={{ color: "red", fontSize: "1rcap" }}>{error}</p>
-        )}
+        {error && <p style={{ color: "red", fontSize: "1rcap" }}>{error}</p>}
 
         <div className="t-low-contain">
           <div className="t-s-contain">
@@ -263,40 +258,36 @@ export default function Tasks() {
 
       {/* Task details overlay */}
       {isTcontentOpen && selectedTask && (
-        <div className="Tc-overlay" onClick={closeTc}>
+        <div className="tc-overlay" onClick={closeTc}>
           <div
-            className="Tc-box"
+            className="tc-box"
             onClick={(e) => e.stopPropagation()} // prevent closing when clicking inside
           >
-            <button
-              className="tc-close-btn"
-              type="button"
-              onClick={closeTc}
-            >
-              ×
-            </button>
+            <div className="tc-head-wrap">
+              <h3 className="tc-title">{selectedTask.title}</h3>
+              <button onClick={closeTc} className="tc-close-btn" type="button">
+                <i className="bx bx-x"></i>
+              </button>
 
-            <h3 className="tc-title">{selectedTask.title}</h3>
-            {selectedTask.description && (
-              <p className="tc-desc">{selectedTask.description}</p>
-            )}
-            <p className="tc-status">
-              Status:{" "}
-              {selectedTask.isCompleted ? "Completed" : "Pending"}
+            </div>
+              {selectedTask.description && (
+                <p className="tc-desc">{selectedTask.description}</p>
+              )}
+            <p
+              style={{
+                backgroundColor: selectedTask.isCompleted ? "green" : "#808080",
+              }}
+              className="tc-status"
+            >
+              Status: {selectedTask.isCompleted ? "Completed" : "Pending"}
             </p>
             {selectedTask.dueDate && (
               <p className="tc-due">
-                Due:{" "}
-                {new Date(
-                  selectedTask.dueDate
-                ).toLocaleDateString()}
+                Due: {new Date(selectedTask.dueDate).toLocaleDateString()}
               </p>
             )}
             <p className="tc-created">
-              Created:{" "}
-              {new Date(
-                selectedTask.$createdAt
-              ).toLocaleString()}
+              Created: {new Date(selectedTask.$createdAt).toLocaleString()}
             </p>
           </div>
         </div>
